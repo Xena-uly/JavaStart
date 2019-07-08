@@ -1,0 +1,23 @@
+package net.ukr.xena_reg;
+
+import java.io.File;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		File pCatalog = new File(".");
+		listDirect(pCatalog);
+	}
+
+	public static void listDirect(File catalog) {
+
+		File[] listFiles = catalog.listFiles();
+		for (int i = 0; i < listFiles.length; i++) {
+			if (listFiles[i].isDirectory()) {
+				System.out.println(listFiles[i]);
+			}
+		}
+	}
+}
